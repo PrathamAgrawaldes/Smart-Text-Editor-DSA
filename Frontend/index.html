@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Undo/Redo Text Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="editor-container">
+
+        <header>
+            <h1>Smart Text Editor</h1>
+            <p>A simple text editor with Undo and Redo support.</p>
+        </header>
+
+        <main>
+
+            <section class="editor">
+
+                <label for="text-area">Your Text</label>
+
+                <textarea
+                    id="text-area"
+                    placeholder="Start typing here..."
+                    spellcheck="true"
+                ></textarea>
+
+                <div class="toolbar">
+                    <button id="replace-btn">Replace Selected Text</button>
+                    <button id="undo-btn">Undo</button>
+                    <button id="redo-btn">Redo</button>
+                </div>
+
+                <div class="replace-controls">
+                    <label for="replace-text">Replacement Text</label>
+
+                    <input
+                        type="text"
+                        id="replace-text"
+                        placeholder="Enter replacement text"
+                    >
+                </div>
+
+                <p id="status-message" role="status" aria-live="polite">
+                    Ready to edit.
+                </p>
+
+            </section>
+
+            <section class="history">
+
+                <h2>Editing History</h2>
+
+                <ul id="history-list">
+                    <li>No editing history yet.</li>
+                </ul>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
